@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+    
+    <title>UNT Clubs</title>
+    <style>
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans w-full">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+	src="https://code.jquery.com/jquery-3.7.1.js"
+	integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+	crossorigin="anonymous"></script>
+		
+    
+    <header class="flex justify-between p-4">
+        <div class="flex items-center">
+            <i class="iconoir-home text-4xl mr-auto"></i>
+        </div>
+        <div class="flex items-center">
+            <span class="ml-2 text-4xl font-bold">UNT Clubs</span>
+        </div>
+        <div class="flex items-center">
+            <i class="iconoir-user-circle text-4xl ml-auto"></i>
+        </div>
+    </header>
+
+    <div class="relative bg-gray-800 text-white py-4 h-64 ml-16 mr-16 border-2 border-solid border-white">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <img class="w-full h-full object-cover" src="https://source.unsplash.com/random/1920x1080/?city" alt="" />
+        </div>
+        <div class="flex items-center absolute inset-0">
+            <div class="text-4xl font-bold mx-auto drop-shadow-lg">
+                Events
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-4">
+        <form class="flex items-center w-5/6">
+            <textarea class="px-4 py-2 border-2 border-solid rounded-full flex-grow text-black h-8 resize-none" placeholder="Search"></textarea>
+        </form>
+    </div>
+
+    <div class="flex justify-center mt-4" >
+        <div class="flex flex-wrap justify-center" id="tagcloud"></div>
+    </div>
+
+    <script>
+        taglist = ["#sports", "#culture", "#hobbies"];
+        $(document).ready(function() {
+            taglist.forEach((tag) => {
+                $(`<div class="flex items-center justify-center p-2 m-2 bg-orange-700 rounded-full border-4 border-solid border-white">${tag}</div>`).appendTo('#tagcloud');
+            });
+        });
+    </script>
+</body>
+</html>
